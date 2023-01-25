@@ -1,4 +1,11 @@
-# school
+# school Flutter
+
+Bloc
+Freezed
+Go Router
+json annotation
+build runner
+json serializable
 
 A new Flutter project.
 
