@@ -7,3 +7,4 @@ class BooksEvents with _$BooksEvents {
   const factory BooksEvents.getUserBooks() = _FetchUserBooks;
 }
 
+

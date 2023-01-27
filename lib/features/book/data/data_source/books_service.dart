@@ -8,7 +8,7 @@ class BooksService {
     try {
       final response = await rootBundle.loadString('books_mock_api.json');
       final parsed = await jsonDecode(response);
-      final books = Book.fromJsonList(parsed['result'] as List);
+      final books = await Book.fromJsonList(parsed['result'] as List);
       return books;
     } catch (e) {
       throw Exception(e);

@@ -1,24 +1,28 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'package:school/features/book/data/data_source/books_service.dart';
+import 'package:school/features/book/bloc/books_bloc.dart';
+import 'package:school/features/book/bloc/books_events.dart';
+import 'package:school/features/book/data/data_source/books_repository.dart';
 import 'package:school/router.dart';
-import 'package:school/screens/home_screen.dart';
-
-import 'features/book/data/models/book.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    MultiBlocProvider(
+      providers: [
+        BlocProvider<BooksBloc>(
+          create: (BuildContext context) =>
+            BooksBloc(BooksRepository())..add(
+                const BooksEvents.getUserBooks(),),
+        ),
+      ],
+      child: const MyApp(),
+    ),
+  );
 }
 
 final _router = GoRouter(
-  routes: [
-    GoRoute(
-      path: '/',
-      builder: (context, state) => const HomeScreen(),
-      routes: appRoutes
-    ),
-
-  ],
+  routes: appRoutes,
 );
 
 class MyApp extends StatelessWidget {
@@ -32,7 +36,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      routerConfig: _router
+      routerConfig: _router,
     );
   }
 }
