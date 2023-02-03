@@ -2,7 +2,7 @@
   "result": [
     {
       "id" : "book0",
-      "title": "happy kids",
+      "title": "happy kids reading book",
       "grade": 5,
       "type": "reading",
       "chapters": [
@@ -70,7 +70,7 @@
     },
     {
       "id" : "book1",
-      "title": "happy kids",
+      "title": "happy kids workbook",
       "grade": 5,
       "type": "reading",
       "chapters": [

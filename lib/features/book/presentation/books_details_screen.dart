@@ -1,4 +1,7 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:school/features/book/bloc/books_bloc/books_bloc.dart';
+import 'package:school/features/book/bloc/books_bloc/books_state.dart';
 
 class BooksDetailsScreen extends StatelessWidget {
   const BooksDetailsScreen({super.key, required this.bookId});
@@ -6,6 +9,15 @@ class BooksDetailsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text('this is the books screen');
+    return BlocBuilder<BooksBloc, BooksState>(
+      builder: (context, state) {
+       if (state is Success) {
+         final book = state.booksList.firstWhere((element) =>
+         element.id == bookId);
+         return Text(book.title);
+       }
+       return const Text('something went wrong');
+      },
+    );
   }
 }

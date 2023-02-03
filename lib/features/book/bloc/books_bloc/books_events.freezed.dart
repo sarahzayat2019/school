@@ -19,32 +19,38 @@ mixin _$BooksEvents {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() getUserBooks,
+    required TResult Function() answerQuestion,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? getUserBooks,
+    TResult? Function()? answerQuestion,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? getUserBooks,
+    TResult Function()? answerQuestion,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_FetchUserBooks value) getUserBooks,
+    required TResult Function(_AnswerQuestion value) answerQuestion,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_FetchUserBooks value)? getUserBooks,
+    TResult? Function(_AnswerQuestion value)? answerQuestion,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_FetchUserBooks value)? getUserBooks,
+    TResult Function(_AnswerQuestion value)? answerQuestion,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -107,6 +113,7 @@ class _$_FetchUserBooks implements _FetchUserBooks {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() getUserBooks,
+    required TResult Function() answerQuestion,
   }) {
     return getUserBooks();
   }
@@ -115,6 +122,7 @@ class _$_FetchUserBooks implements _FetchUserBooks {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? getUserBooks,
+    TResult? Function()? answerQuestion,
   }) {
     return getUserBooks?.call();
   }
@@ -123,6 +131,7 @@ class _$_FetchUserBooks implements _FetchUserBooks {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? getUserBooks,
+    TResult Function()? answerQuestion,
     required TResult orElse(),
   }) {
     if (getUserBooks != null) {
@@ -135,6 +144,7 @@ class _$_FetchUserBooks implements _FetchUserBooks {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_FetchUserBooks value) getUserBooks,
+    required TResult Function(_AnswerQuestion value) answerQuestion,
   }) {
     return getUserBooks(this);
   }
@@ -143,6 +153,7 @@ class _$_FetchUserBooks implements _FetchUserBooks {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_FetchUserBooks value)? getUserBooks,
+    TResult? Function(_AnswerQuestion value)? answerQuestion,
   }) {
     return getUserBooks?.call(this);
   }
@@ -151,6 +162,7 @@ class _$_FetchUserBooks implements _FetchUserBooks {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_FetchUserBooks value)? getUserBooks,
+    TResult Function(_AnswerQuestion value)? answerQuestion,
     required TResult orElse(),
   }) {
     if (getUserBooks != null) {
@@ -162,4 +174,106 @@ class _$_FetchUserBooks implements _FetchUserBooks {
 
 abstract class _FetchUserBooks implements BooksEvents {
   const factory _FetchUserBooks() = _$_FetchUserBooks;
+}
+
+/// @nodoc
+abstract class _$$_AnswerQuestionCopyWith<$Res> {
+  factory _$$_AnswerQuestionCopyWith(
+          _$_AnswerQuestion value, $Res Function(_$_AnswerQuestion) then) =
+      __$$_AnswerQuestionCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_AnswerQuestionCopyWithImpl<$Res>
+    extends _$BooksEventsCopyWithImpl<$Res, _$_AnswerQuestion>
+    implements _$$_AnswerQuestionCopyWith<$Res> {
+  __$$_AnswerQuestionCopyWithImpl(
+      _$_AnswerQuestion _value, $Res Function(_$_AnswerQuestion) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$_AnswerQuestion implements _AnswerQuestion {
+  const _$_AnswerQuestion();
+
+  @override
+  String toString() {
+    return 'BooksEvents.answerQuestion()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_AnswerQuestion);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() getUserBooks,
+    required TResult Function() answerQuestion,
+  }) {
+    return answerQuestion();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? getUserBooks,
+    TResult? Function()? answerQuestion,
+  }) {
+    return answerQuestion?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? getUserBooks,
+    TResult Function()? answerQuestion,
+    required TResult orElse(),
+  }) {
+    if (answerQuestion != null) {
+      return answerQuestion();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_FetchUserBooks value) getUserBooks,
+    required TResult Function(_AnswerQuestion value) answerQuestion,
+  }) {
+    return answerQuestion(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_FetchUserBooks value)? getUserBooks,
+    TResult? Function(_AnswerQuestion value)? answerQuestion,
+  }) {
+    return answerQuestion?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FetchUserBooks value)? getUserBooks,
+    TResult Function(_AnswerQuestion value)? answerQuestion,
+    required TResult orElse(),
+  }) {
+    if (answerQuestion != null) {
+      return answerQuestion(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _AnswerQuestion implements BooksEvents {
+  const factory _AnswerQuestion() = _$_AnswerQuestion;
 }

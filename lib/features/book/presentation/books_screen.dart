@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:school/features/book/bloc/books_bloc.dart';
-import 'package:school/features/book/bloc/books_state.dart';
+import 'package:school/features/book/bloc/books_bloc/books_bloc.dart';
+import 'package:school/features/book/bloc/books_bloc/books_state.dart';
 import 'package:school/features/book/data/models/book.dart';
 import 'package:school/features/book/presentation/widgets/book_card.dart';
 
@@ -25,6 +25,12 @@ class BooksListing extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<BooksBloc, BooksState>(
+      buildWhen: (previousState, state) {
+        if (state is Success) {
+          return true;
+        }
+        return false;
+      },
       builder: (context, state) {
         return state.maybeWhen(
           success: (books) => BookList(books: books),
@@ -44,11 +50,10 @@ class BookList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-        itemCount: books.length,
-        itemBuilder: (BuildContext context, int index) {
-          return BookCard(book: books[index]);
-        },
+      itemCount: books.length,
+      itemBuilder: (BuildContext context, int index) {
+        return BookCard(book: books[index]);
+      },
     );
   }
 }
-

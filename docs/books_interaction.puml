@@ -1,0 +1,23 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+autoactivate on
+
+participant MainAppUI as "MainAppUI" #orange
+participant Bloc as "Bloc" #LightBlue
+participant OUKBackend as "OUKBackend" #orange
+
+
+MainAppUI -> Bloc: fetchBooks()
+Bloc -> OUKBackend: response(books)
+OUKBackend -> Bloc: saveBooksState(books)
+Bloc -> MainAppUI: showBooksList
+
+@enduml
+
+BooksList when enters booksPage
+we have booksListBloc state
+
+User enters single book screen (direct url and through clicking on book card)
+option 1:

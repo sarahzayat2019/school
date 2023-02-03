@@ -22,6 +22,7 @@ mixin _$BooksState {
     required TResult Function() loading,
     required TResult Function(List<Book> booksList) success,
     required TResult Function(String error) failure,
+    required TResult Function(Book book) selectedBook,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -30,6 +31,7 @@ mixin _$BooksState {
     TResult? Function()? loading,
     TResult? Function(List<Book> booksList)? success,
     TResult? Function(String error)? failure,
+    TResult? Function(Book book)? selectedBook,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,6 +40,7 @@ mixin _$BooksState {
     TResult Function()? loading,
     TResult Function(List<Book> booksList)? success,
     TResult Function(String error)? failure,
+    TResult Function(Book book)? selectedBook,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -47,6 +50,7 @@ mixin _$BooksState {
     required TResult Function(Loading value) loading,
     required TResult Function(Success value) success,
     required TResult Function(Failure value) failure,
+    required TResult Function(SelectedBook value) selectedBook,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -55,6 +59,7 @@ mixin _$BooksState {
     TResult? Function(Loading value)? loading,
     TResult? Function(Success value)? success,
     TResult? Function(Failure value)? failure,
+    TResult? Function(SelectedBook value)? selectedBook,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -63,6 +68,7 @@ mixin _$BooksState {
     TResult Function(Loading value)? loading,
     TResult Function(Success value)? success,
     TResult Function(Failure value)? failure,
+    TResult Function(SelectedBook value)? selectedBook,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -161,6 +167,7 @@ class _$Initial implements Initial {
     required TResult Function() loading,
     required TResult Function(List<Book> booksList) success,
     required TResult Function(String error) failure,
+    required TResult Function(Book book) selectedBook,
   }) {
     return initial(booksList);
   }
@@ -172,6 +179,7 @@ class _$Initial implements Initial {
     TResult? Function()? loading,
     TResult? Function(List<Book> booksList)? success,
     TResult? Function(String error)? failure,
+    TResult? Function(Book book)? selectedBook,
   }) {
     return initial?.call(booksList);
   }
@@ -183,6 +191,7 @@ class _$Initial implements Initial {
     TResult Function()? loading,
     TResult Function(List<Book> booksList)? success,
     TResult Function(String error)? failure,
+    TResult Function(Book book)? selectedBook,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -198,6 +207,7 @@ class _$Initial implements Initial {
     required TResult Function(Loading value) loading,
     required TResult Function(Success value) success,
     required TResult Function(Failure value) failure,
+    required TResult Function(SelectedBook value) selectedBook,
   }) {
     return initial(this);
   }
@@ -209,6 +219,7 @@ class _$Initial implements Initial {
     TResult? Function(Loading value)? loading,
     TResult? Function(Success value)? success,
     TResult? Function(Failure value)? failure,
+    TResult? Function(SelectedBook value)? selectedBook,
   }) {
     return initial?.call(this);
   }
@@ -220,6 +231,7 @@ class _$Initial implements Initial {
     TResult Function(Loading value)? loading,
     TResult Function(Success value)? success,
     TResult Function(Failure value)? failure,
+    TResult Function(SelectedBook value)? selectedBook,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -278,6 +290,7 @@ class _$Loading implements Loading {
     required TResult Function() loading,
     required TResult Function(List<Book> booksList) success,
     required TResult Function(String error) failure,
+    required TResult Function(Book book) selectedBook,
   }) {
     return loading();
   }
@@ -289,6 +302,7 @@ class _$Loading implements Loading {
     TResult? Function()? loading,
     TResult? Function(List<Book> booksList)? success,
     TResult? Function(String error)? failure,
+    TResult? Function(Book book)? selectedBook,
   }) {
     return loading?.call();
   }
@@ -300,6 +314,7 @@ class _$Loading implements Loading {
     TResult Function()? loading,
     TResult Function(List<Book> booksList)? success,
     TResult Function(String error)? failure,
+    TResult Function(Book book)? selectedBook,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -315,6 +330,7 @@ class _$Loading implements Loading {
     required TResult Function(Loading value) loading,
     required TResult Function(Success value) success,
     required TResult Function(Failure value) failure,
+    required TResult Function(SelectedBook value) selectedBook,
   }) {
     return loading(this);
   }
@@ -326,6 +342,7 @@ class _$Loading implements Loading {
     TResult? Function(Loading value)? loading,
     TResult? Function(Success value)? success,
     TResult? Function(Failure value)? failure,
+    TResult? Function(SelectedBook value)? selectedBook,
   }) {
     return loading?.call(this);
   }
@@ -337,6 +354,7 @@ class _$Loading implements Loading {
     TResult Function(Loading value)? loading,
     TResult Function(Success value)? success,
     TResult Function(Failure value)? failure,
+    TResult Function(SelectedBook value)? selectedBook,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -423,6 +441,7 @@ class _$Success implements Success {
     required TResult Function() loading,
     required TResult Function(List<Book> booksList) success,
     required TResult Function(String error) failure,
+    required TResult Function(Book book) selectedBook,
   }) {
     return success(booksList);
   }
@@ -434,6 +453,7 @@ class _$Success implements Success {
     TResult? Function()? loading,
     TResult? Function(List<Book> booksList)? success,
     TResult? Function(String error)? failure,
+    TResult? Function(Book book)? selectedBook,
   }) {
     return success?.call(booksList);
   }
@@ -445,6 +465,7 @@ class _$Success implements Success {
     TResult Function()? loading,
     TResult Function(List<Book> booksList)? success,
     TResult Function(String error)? failure,
+    TResult Function(Book book)? selectedBook,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -460,6 +481,7 @@ class _$Success implements Success {
     required TResult Function(Loading value) loading,
     required TResult Function(Success value) success,
     required TResult Function(Failure value) failure,
+    required TResult Function(SelectedBook value) selectedBook,
   }) {
     return success(this);
   }
@@ -471,6 +493,7 @@ class _$Success implements Success {
     TResult? Function(Loading value)? loading,
     TResult? Function(Success value)? success,
     TResult? Function(Failure value)? failure,
+    TResult? Function(SelectedBook value)? selectedBook,
   }) {
     return success?.call(this);
   }
@@ -482,6 +505,7 @@ class _$Success implements Success {
     TResult Function(Loading value)? loading,
     TResult Function(Success value)? success,
     TResult Function(Failure value)? failure,
+    TResult Function(SelectedBook value)? selectedBook,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -566,6 +590,7 @@ class _$Failure implements Failure {
     required TResult Function() loading,
     required TResult Function(List<Book> booksList) success,
     required TResult Function(String error) failure,
+    required TResult Function(Book book) selectedBook,
   }) {
     return failure(error);
   }
@@ -577,6 +602,7 @@ class _$Failure implements Failure {
     TResult? Function()? loading,
     TResult? Function(List<Book> booksList)? success,
     TResult? Function(String error)? failure,
+    TResult? Function(Book book)? selectedBook,
   }) {
     return failure?.call(error);
   }
@@ -588,6 +614,7 @@ class _$Failure implements Failure {
     TResult Function()? loading,
     TResult Function(List<Book> booksList)? success,
     TResult Function(String error)? failure,
+    TResult Function(Book book)? selectedBook,
     required TResult orElse(),
   }) {
     if (failure != null) {
@@ -603,6 +630,7 @@ class _$Failure implements Failure {
     required TResult Function(Loading value) loading,
     required TResult Function(Success value) success,
     required TResult Function(Failure value) failure,
+    required TResult Function(SelectedBook value) selectedBook,
   }) {
     return failure(this);
   }
@@ -614,6 +642,7 @@ class _$Failure implements Failure {
     TResult? Function(Loading value)? loading,
     TResult? Function(Success value)? success,
     TResult? Function(Failure value)? failure,
+    TResult? Function(SelectedBook value)? selectedBook,
   }) {
     return failure?.call(this);
   }
@@ -625,6 +654,7 @@ class _$Failure implements Failure {
     TResult Function(Loading value)? loading,
     TResult Function(Success value)? success,
     TResult Function(Failure value)? failure,
+    TResult Function(SelectedBook value)? selectedBook,
     required TResult orElse(),
   }) {
     if (failure != null) {
@@ -640,5 +670,166 @@ abstract class Failure implements BooksState {
   String get error;
   @JsonKey(ignore: true)
   _$$FailureCopyWith<_$Failure> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$SelectedBookCopyWith<$Res> {
+  factory _$$SelectedBookCopyWith(
+          _$SelectedBook value, $Res Function(_$SelectedBook) then) =
+      __$$SelectedBookCopyWithImpl<$Res>;
+  @useResult
+  $Res call({Book book});
+
+  $BookCopyWith<$Res> get book;
+}
+
+/// @nodoc
+class __$$SelectedBookCopyWithImpl<$Res>
+    extends _$BooksStateCopyWithImpl<$Res, _$SelectedBook>
+    implements _$$SelectedBookCopyWith<$Res> {
+  __$$SelectedBookCopyWithImpl(
+      _$SelectedBook _value, $Res Function(_$SelectedBook) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? book = null,
+  }) {
+    return _then(_$SelectedBook(
+      null == book
+          ? _value.book
+          : book // ignore: cast_nullable_to_non_nullable
+              as Book,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $BookCopyWith<$Res> get book {
+    return $BookCopyWith<$Res>(_value.book, (value) {
+      return _then(_value.copyWith(book: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$SelectedBook implements SelectedBook {
+  const _$SelectedBook(this.book);
+
+  @override
+  final Book book;
+
+  @override
+  String toString() {
+    return 'BooksState.selectedBook(book: $book)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SelectedBook &&
+            (identical(other.book, book) || other.book == book));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, book);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SelectedBookCopyWith<_$SelectedBook> get copyWith =>
+      __$$SelectedBookCopyWithImpl<_$SelectedBook>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(List<Book> booksList) initial,
+    required TResult Function() loading,
+    required TResult Function(List<Book> booksList) success,
+    required TResult Function(String error) failure,
+    required TResult Function(Book book) selectedBook,
+  }) {
+    return selectedBook(book);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(List<Book> booksList)? initial,
+    TResult? Function()? loading,
+    TResult? Function(List<Book> booksList)? success,
+    TResult? Function(String error)? failure,
+    TResult? Function(Book book)? selectedBook,
+  }) {
+    return selectedBook?.call(book);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(List<Book> booksList)? initial,
+    TResult Function()? loading,
+    TResult Function(List<Book> booksList)? success,
+    TResult Function(String error)? failure,
+    TResult Function(Book book)? selectedBook,
+    required TResult orElse(),
+  }) {
+    if (selectedBook != null) {
+      return selectedBook(book);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Failure value) failure,
+    required TResult Function(SelectedBook value) selectedBook,
+  }) {
+    return selectedBook(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Failure value)? failure,
+    TResult? Function(SelectedBook value)? selectedBook,
+  }) {
+    return selectedBook?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(Failure value)? failure,
+    TResult Function(SelectedBook value)? selectedBook,
+    required TResult orElse(),
+  }) {
+    if (selectedBook != null) {
+      return selectedBook(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SelectedBook implements BooksState {
+  const factory SelectedBook(final Book book) = _$SelectedBook;
+
+  Book get book;
+  @JsonKey(ignore: true)
+  _$$SelectedBookCopyWith<_$SelectedBook> get copyWith =>
       throw _privateConstructorUsedError;
 }

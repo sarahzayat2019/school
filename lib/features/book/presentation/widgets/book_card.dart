@@ -24,7 +24,7 @@ class BookCard extends StatelessWidget {
                   'Grade: ${book.grade}',
                   style: TextStyle(color:
                   Colors.black.withOpacity(0.6),
-                      height: 2,
+                      height: 2
                   ),
                 ),
                 Text(

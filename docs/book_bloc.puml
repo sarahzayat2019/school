@@ -1,0 +1,16 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+autoactivate on
+
+participant MainAppUI as "MainAppUI" #orange
+participant booksBloc as "booksBloc" #LightBlue
+
+
+MainAppUI -> booksBloc: selectBook(bookId)
+booksBloc -> "MainAppUI": response(book)
+
+@enduml
+
+

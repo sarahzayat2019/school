@@ -17,11 +17,12 @@ List<RouteBase> appRoutes = <RouteBase>[
           builder: (BuildContext context, GoRouterState state) {
             return const BooksScreen();
           },
+          routes: []
         ),
         GoRoute(
           path: '$BOOKS_ROUTE/:bookId',
           builder: (context, state) {
-            return  BooksDetailsScreen(bookId: state.params['bookId']);
+            return BooksDetailsScreen(bookId: state.params['bookId']);
           },
         ),
       ]

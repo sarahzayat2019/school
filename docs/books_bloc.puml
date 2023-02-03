@@ -1,0 +1,19 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+autoactivate on
+
+participant MainAppUI as "MainAppUI" #orange
+participant Bloc as "Bloc" #LightBlue
+participant OUKBackend as "OUKBackend" #orange
+
+
+MainAppUI -> Bloc: fetchBooks()
+Bloc -> OUKBackend: response(books)
+OUKBackend -> Bloc: saveBooksState(books)
+Bloc -> MainAppUI: showBooksList
+
+@enduml
+
+
