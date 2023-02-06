@@ -9,15 +9,19 @@ import 'package:school/router.dart';
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(
-    MultiBlocProvider(
-      providers: [
-        BlocProvider<BooksBloc>(
-          create: (BuildContext context) =>
-            BooksBloc(BooksRepository())..add(
+    RepositoryProvider(
+      create: (context) => BooksRepository(),
+      child: MultiBlocProvider(
+        providers: [
+          BlocProvider<BooksBloc>(
+            create: (BuildContext context) =>
+            BooksBloc(context.read<BooksRepository>())
+              ..add(
                 const BooksEvents.getUserBooks(),),
-        ),
-      ],
-      child: const MyApp(),
+          ),
+        ],
+        child: const MyApp(),
+      ),
     ),
   );
 }
